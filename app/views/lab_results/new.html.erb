@@ -1,0 +1,4 @@
+<%= form_with url: upload_lab_results_path, local: true, multipart: true do |form| %>
+  <%= form.file_field :lab_file %>
+  <%= form.submit "Upload" %>
+<% end %>

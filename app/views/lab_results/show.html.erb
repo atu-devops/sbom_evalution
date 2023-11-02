@@ -1,0 +1,10 @@
+<table>
+  <% @parsed_results.each do |result| %>
+    <tr>
+      <td><%= result[:code] %></td>
+      <td><%= result[:result] %></td>
+      <td><%= result[:format] %></td>
+      <td><%= result[:comment].join("\n") %></td>
+    </tr>
+  <% end %>
+</table>
