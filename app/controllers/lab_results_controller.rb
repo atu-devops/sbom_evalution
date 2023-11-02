@@ -5,6 +5,16 @@ class LabResultsController < ApplicationController
 
   def upload
     uploaded_file = params[:lab_file]
+    # make sure a file is uploaded
+    unless uploaded_file
+      return render json: { error: 'No file provided' }, status: :unprocessable_entity
+    end
+
+    # ensure it is s text file
+    unless ['text/plain'].include?(uploaded_file.content_type)
+      return render json: { error: 'Unsupported file type' }, status: :unprocessable_entity
+    end
+
     @parsed_results = parse_file(uploaded_file.read)
     render :show
   end
