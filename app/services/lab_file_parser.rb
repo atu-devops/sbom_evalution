@@ -13,6 +13,11 @@ class LabFileParser
     lines.each do |line|
       parts = line.split('|')
 
+
+      if parts[0] != 'OBX' && parts[0] != 'NTE'
+        raise StandardError, 'Invalid file format'
+      end
+
       # Parse OBX lines
       if parts[0] == 'OBX'
         current_obx = {
