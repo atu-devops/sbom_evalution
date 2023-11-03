@@ -1,0 +1,9 @@
+OBX|1|C100|20.0|
+BBS|2|Comment for C100 result|
+OBX|2|UNKNOWN_CODE|500|
+NTE|2|Comment for UNKNOWN_CODE result|
+OBX|3|A250|UNKNOWN_VALUE|
+NTE|3|Comment for UNKNOWN_VALUE result|
+OBX|4|B250|
+NTE|4|Comment 1 for ++ result|
+
