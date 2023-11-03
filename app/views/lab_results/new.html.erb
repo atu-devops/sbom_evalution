@@ -1,4 +1,10 @@
-<%= form_with url: upload_lab_results_path, local: true, multipart: true do |form| %>
-  <%= form.file_field :lab_file %>
-  <%= form.submit "Upload" %>
-<% end %>
+<div class="bg-white flex flex-col">
+  <header class="bg-emerald-200 self-stretch flex w-full flex-col px-20 py-7 max-md:max-w-full max-md:px-5">
+    <h1 class="text-sky-800 text-4xl font-medium leading-[52px] self-center whitespace-nowrap">Nav Bar</h1>
+  </header>
+  <section class="shadow-lg bg-white self-center flex w-[645px] max-w-full flex-col mt-28 mb-72 pl-6 pr-5 py-8 rounded-lg max-md:my-10 max-md:pl-5">
+    <%= render 'upload_form' %>
+  </section>
+</div>
+
+

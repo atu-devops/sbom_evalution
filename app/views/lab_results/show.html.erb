@@ -1,10 +1,29 @@
-<table>
-  <% @parsed_results.each do |result| %>
-    <tr>
-      <td><%= result[:code] %></td>
-      <td><%= result[:result] %></td>
-      <td><%= result[:format] %></td>
-      <td><%= result[:comment].join("\n") %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="bg-white flex flex-col">
+  <header class="bg-emerald-200 self-stretch flex w-full flex-col px-20 py-7 max-md:max-w-full max-md:px-5">
+    <h1 class="text-sky-800 text-4xl font-medium leading-[52px] self-center whitespace-nowrap">Nav Bar</h1>
+  </header>
+  <main class="self-center flex w-[645px] max-w-full flex-col mt-20 mb-24 px-5 max-md:my-10">
+    <section class="bg-white flex w-full flex-col pl-3.5 pr-7 pt-4 pb-9 rounded-lg self-start max-md:max-w-full max-md:pr-5">
+      <header class="flex w-full items-start justify-between gap-5 self-start max-md:justify-center">
+        <h2 class="text-zinc-800 text-base font-medium self-stretch">Code</h2>
+        <h2 class="text-zinc-800 text-base font-medium self-stretch">Result</h2>
+        <h2 class="text-zinc-800 text-base font-medium self-stretch">Format</h2>
+        <h2 class="text-zinc-800 text-base font-medium self-stretch whitespace-nowrap">Comment</h2>
+      </header>
+      <% @parsed_results.each do |result| %>
+        <div class="flex w-full items-start justify-between gap-5 mt-2 self-start max-md:max-w-full max-md:flex-wrap max-md:justify-center">
+          <div class="text-black text-sm leading-5 self-start"><%= result[:code] %></div>
+          <div class="text-black text-sm leading-5 self-start"><%= result[:result] %></div>
+          <div class="text-black text-sm leading-5 self-start"><%= result[:format] %></div>
+          <div class="text-black text-sm leading-5 whitespace-nowrap self-start"><%= result[:comment].join(", ") %></div>
+        </div>
+      <% end %>
+    </section>
+    <h2 class="text-black text-xl leading-6 whitespace-nowrap ml-3 mt-24 self-start max-md:ml-2.5 max-md:mt-10">Upload Another File</h2>
+    <section class="shadow-lg bg-white flex w-full grow flex-col mt-8 pl-6 pr-5 py-8 rounded-lg self-start max-md:max-w-full max-md:pl-5">
+      <%= render 'upload_form' %>
+    </section>
+    <button class="text-white text-base font-medium leading-6 whitespace-nowrap justify-center items-center bg-neutral-300 w-[86px] max-w-full mt-12 px-4 py-2 rounded self-end max-md:mt-10">Submit</button>
+  </main>
+</div>
+

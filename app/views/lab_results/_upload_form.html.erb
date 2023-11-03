@@ -1,0 +1,11 @@
+<%= form_with url: upload_lab_results_path, local: true, multipart: true do |form| %>
+  <h2 class="text-black text-xl font-medium leading-6 whitespace-nowrap self-end max-md:max-w-full">Upload File</h2>
+  <div class="items-start flex w-full flex-col mt-9 self-end max-md:max-w-full">
+    <%= form.label :lab_file, class: "text-zinc-800 text-base font-bold leading-6 self-stretch whitespace-nowrap max-md:max-w-full" %>
+    <div class="items-start self-stretch border border-[color:var(--neutral-300,#D1D1D1)] flex justify-between gap-2 mt-1 pr-96 py-2 rounded-lg border-solid max-md:max-w-full max-md:flex-wrap max-md:pr-5">
+      <%= form.file_field :lab_file, class: "text-zinc-800 text-base leading-6 self-stretch whitespace-nowrap justify-center items-center bg-zinc-100 flex-1 px-2 py-1", id: "file" %>
+      <div class="text-zinc-500 text-sm leading-5 self-center whitespace-nowrap my-auto">No file chosen</div>
+    </div>
+  </div>
+  <%= form.submit "Upload", class: "text-white text-base font-medium leading-6 whitespace-nowrap justify-center items-center bg-neutral-300 w-[86px] max-w-full mt-12 px-4 py-2 rounded self-end max-md:mt-10" %>
+<% end %>
