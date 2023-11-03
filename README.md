@@ -22,3 +22,6 @@ I tried to do this as quickly as possible as the time set for it was 45min to an
  - add some more error handling
  - add further and broader tests (maybe capybara)
  - get a better understanding of tailwind and how to use it
+
+## Notes
+Here is a [screenshot](https://drive.google.com/file/d/1s8IzUEMGJgoW3rz4_66P-dumHn_Ap7ZN/view?usp=sharing) of figma with the plugin enabled. It doesn't display the emerald colours among the colours in the bottom right.(I'm sure it is my mistake)
