@@ -15,6 +15,7 @@ I approached the task with a backend mindset at that is my core skillset. In tha
  - Following the instructions from the test I used the plugin but the code it was rendering was all squashed in the top left corner. Also the background colours were not rendering. Within the plugin UI i didn't see the emerald colour decieded to get the layout working as much as i could and deal with colours later.
  - I tried a different plugin from builder.io and that worked better. So there was some kind of serviceable layout.
  - Once there was a basic layout there it made sense to generate a partial for the form so as not to duplicate it on both pages.
+ - After all I added the navbar bg colour to the tailwind config.
 
 ## What I would do next
 I tried to do this as quickly as possible as the time set for it was 45min to an hour. So as of now I would
